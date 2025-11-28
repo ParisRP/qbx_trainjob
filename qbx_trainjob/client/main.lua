@@ -131,6 +131,12 @@ local function createTrainJob(mode)
     SetVehicleFuelLevel(jobData.train, 100.0)
     DecorSetFloat(jobData.train, "_FUEL_LEVEL", GetVehicleFuelLevel(jobData.train))
     
+    Citizen.SetTimeout(2000, function()
+        if DoesEntityExist(jobData.train) then
+            setTrainCollision(jobData.train, true)
+        end
+    end)
+
     local trainNetworkIds = {}
     for i = 1, 6 do
         local carriage = GetTrainCarriage(jobData.train, i)
@@ -341,6 +347,9 @@ end)
 function EndTrainJob(completed)
     if currentTrainJob then
         TriggerServerEvent("qbx_trainjob:server:completeLine", currentTrainJob.mode, completed)
+        if DoesEntityExist(currentTrainJob.train) then
+            setTrainCollision(currentTrainJob.train, false)
+        end
         
         SetLocalPlayerAsGhost(false)
         DestroyAllCams(true)
