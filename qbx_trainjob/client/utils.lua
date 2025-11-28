@@ -95,3 +95,19 @@ function showProgress(text, duration)
         end
     end)
 end
+
+function setTrainCollision(train, enabled)
+    if not DoesEntityExist(train) then return end
+    
+    -- Désactiver les collisions pour le train et tous ses wagons
+    SetEntityCollision(train, enabled, enabled)
+    
+    for i = 1, 10 do -- Vérifier jusqu'à 10 wagons
+        local carriage = GetTrainCarriage(train, i)
+        if carriage and DoesEntityExist(carriage) then
+            SetEntityCollision(carriage, enabled, enabled)
+        else
+            break
+        end
+    end
+end
