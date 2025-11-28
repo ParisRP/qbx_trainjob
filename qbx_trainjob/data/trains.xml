@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<train_configs version="1">
+
+	<train_config name="metro_config0" populate_train_dist="40.0" announce_stations="true"
+		doors_beep="true" carriages_hang="false" carriages_swing="false"
+		link_tracks_with_adjacent_stations="true" carriage_gap="-0.5">
+		<carriage model_name="metrotrain" max_peds_per_carriage="4" flip_model_dir="false"
+			do_interior_lights="true" carriage_vert_offset="0.4" repeat_count="1" />
+		<carriage model_name="metrotrain" max_peds_per_carriage="4" flip_model_dir="true"
+			do_interior_lights="true" carriage_vert_offset="0.4" repeat_count="1" />
+		<carriage model_name="metrotrain" max_peds_per_carriage="4" flip_model_dir="false"
+			do_interior_lights="true" carriage_vert_offset="0.4" repeat_count="1" />
+		<carriage model_name="metrotrain" max_peds_per_carriage="4" flip_model_dir="true"
+			do_interior_lights="true" carriage_vert_offset="0.4" repeat_count="1" />
+	</train_config>
+
+	<train_config name="metro_config1" populate_train_dist="40.0" announce_stations="true"
+		doors_beep="true" carriages_hang="false" carriages_swing="false"
+		link_tracks_with_adjacent_stations="true" carriage_gap="-0.5">
+		<carriage model_name="metrotrain" max_peds_per_carriage="4" flip_model_dir="false"
+			do_interior_lights="true" carriage_vert_offset="0.4" repeat_count="1" />
+		<carriage model_name="metrotrain" max_peds_per_carriage="4" flip_model_dir="true"
+			do_interior_lights="true" carriage_vert_offset="0.4" repeat_count="1" />
+		<carriage model_name="metrotrain" max_peds_per_carriage="4" flip_model_dir="false"
+			do_interior_lights="true" carriage_vert_offset="0.4" repeat_count="1" />
+		<carriage model_name="metrotrain" max_peds_per_carriage="4" flip_model_dir="true"
+			do_interior_lights="true" carriage_vert_offset="0.4" repeat_count="1" />
+		<carriage model_name="metrotrain" max_peds_per_carriage="4" flip_model_dir="false"
+			do_interior_lights="true" carriage_vert_offset="0.4" repeat_count="1" />
+		<carriage model_name="metrotrain" max_peds_per_carriage="4" flip_model_dir="true"
+			do_interior_lights="true" carriage_vert_offset="0.4" repeat_count="1" />
+	</train_config>
+
+	<train_config_group name="freight_group">
+		<train_config_ref name="freight_config0" />
+	</train_config_group>
+
+</train_configs>
