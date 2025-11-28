@@ -32,6 +32,13 @@
 		<carriage model_name="metrotrain" max_peds_per_carriage="4" flip_model_dir="true"
 			do_interior_lights="true" carriage_vert_offset="0.4" repeat_count="1" />
 	</train_config>
+	
+	<CollisionConfig>
+        <trainCollisionEnabled>true</trainCollisionEnabled>
+        <carriageCollisionEnabled>true</carriageCollisionEnabled>
+        <playerCollisionEnabled>true</playerCollisionEnabled>
+        <vehicleCollisionEnabled>true</vehicleCollisionEnabled>
+    </CollisionConfig>
 
 	<train_config_group name="freight_group">
 		<train_config_ref name="freight_config0" />
