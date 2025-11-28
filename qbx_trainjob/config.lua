@@ -4,29 +4,36 @@ Config = {}
 -- CONFIGURATION DU MÉTIER TRAIN
 -- ============================================
 Config.Job = {
-    name = "train",
-    label = "Train",
+    name = 'train',
+    label = 'Train',
     defaultDuty = true,
     offDutyPay = false,
     grades = {
         [0] = {
-            name = "Trainee",
+            name = 'Trainee',
             payment = 50
         },
         [1] = {
-            name = "Driver", 
+            name = 'Driver', 
             payment = 75
         },
         [2] = {
-            name = "Senior Driver",
+            name = 'Senior Driver',
             payment = 100
         },
         [3] = {
-            name = "Manager",
+            name = 'Manager',
             isboss = true,
             payment = 125
         }
     }
+}
+
+Config.Collision = {
+    enabled = true,
+    enableOnSpawn = false, -- Désactiver au spawn pour éviter les bugs
+    enableAfterDelay = 2000, -- Réactiver après 2 secondes
+    disableOnJobEnd = true -- Désactiver à la fin du job
 }
 
 Config.Framework = "QBCore"
