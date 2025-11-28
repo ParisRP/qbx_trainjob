@@ -179,6 +179,7 @@ local function createTrainJob(mode)
     function jobData.enterTrain()
         local playerPed = PlayerPedId()
         TaskWarpPedIntoVehicle(playerPed, jobData.train, -1)
+        TriggerEvent('vehiclekeys:client:SetOwner', jobData.train)
         jobData.isInsideTrain = true
         notify(Config.Language.job_started, "primary")
     end
@@ -709,3 +710,4 @@ AddEventHandler('onResourceStop', function(resourceName)
 end)
 
 print("^2[qbx_trainjob]^0 Client script loaded successfully")
+
